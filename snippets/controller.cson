@@ -1,0 +1,66 @@
+'.source.php':
+    'sfaction':
+        'prefix': 'sfaction'
+        'body': """
+public function ${1:name}Action(${2:Request $request})
+{
+    ${3:return $this->render('${4:index}.html.twig');}
+}
+"""
+    'sfsecurityannotation':
+        'prefix': 'sfsecurityannotation'
+        'body': '@Security("${1:has_role(\'${2:ROLE_ADMIN}\')}")'
+    'sfcontainer':
+        'prefix': 'sfcontainer'
+        'body': "\$this->get('${1:container}')"
+    'sfcontroller':
+        'prefix': 'sfcontroller'
+        'body': """
+namespace AppBundle\\\\Controller;
+
+use Symfony\\\\Bundle\\\\FrameworkBundle\\\\Controller\\\\Controller;
+
+class ${1:Name}Controller extends Controller
+{
+    ${2}
+}
+"""
+    'sfem':
+        'prefix': 'sfem'
+        'body': "\$em = \$this->getDoctrine()->getManager();"
+    'sfexceptionaccessdenied':
+        'prefix': 'sfexceptionaccessdenied'
+        'body': "throw \$this->createAccessDeniedException(${1:'${2:message}'});"
+    'sfexceptionnotfound':
+        'prefix': 'sfexceptionnotfound'
+        'body': "throw \$this->createNotFoundException(${1:'${2:message}'});"
+    'sfforward':
+        'prefix': 'sfforward'
+        'body': "\$this->forward('${1:Controller}'${2:, [${3}]});"
+    'sfjson':
+        'prefix': 'sfjson'
+        'leftLabel': '3.1+'
+        'body': "\$this->json([$1]);"
+    'sfparameter':
+        'prefix': 'sfparameter'
+        'leftLabel': '2.7+'
+        'body': "\$this->getParameter('${1:parameter}');"
+    'sfredirectroute':
+        'prefix': 'sfredirectroute'
+        'leftLabel': '2.6+'
+        'body': "\$this->redirectToRoute('${1:route}'${2:, [${3}]});"
+    'sfredirect':
+        'prefix': 'sfredirect'
+        'body': "\$this->redirect('${1:url}');"
+    'sfrender':
+        'prefix': 'sfrender'
+        'body': "\$this->render('${1:name}.html.twig'${2:, [${3}]});"
+    'sfrepository':
+        'prefix': 'sfrepository'
+        'body': "\$em->getRepository('${1:AppBundle}:${2:Entity}');"
+    'sfsession':
+        'prefix': 'sfsession'
+        'body': "\$session = \$request->getSession();"
+    'sfdump':
+        'prefix': 'sfdump'
+        'body': 'dump($1);'

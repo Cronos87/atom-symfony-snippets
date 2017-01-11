@@ -1,0 +1,9 @@
+'.source.php':
+    'sfuserequest':
+        'prefix': 'sfuserequest'
+        'body': 'use Symfony\\\\Component\\\\HttpFoundation\\\\Request;'
+        'rightLabelHTML': 'HttpFoundation Request'
+    'sfuseresponse':
+        'prefix': 'sfuseresponse'
+        'body': 'use Symfony\\\\Component\\\\HttpFoundation\\\\Response;'
+        'rightLabelHTML': 'HttpFoundation Response'

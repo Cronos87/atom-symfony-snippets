@@ -1,4 +1,0 @@
-'.source.php':
-    'sfem':
-        'prefix': 'sfem'
-        'body': "\$em = \$this->getDoctrine()->getManager();"

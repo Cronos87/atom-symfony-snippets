@@ -1,4 +1,0 @@
-'.source.php':
-    'sfexceptionaccessdenied':
-        'prefix': 'sfexceptionaccessdenied'
-        'body': "throw \$this->createAccessDeniedException(${1:'${2:message}'});"
